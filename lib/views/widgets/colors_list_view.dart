@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app/constants.dart';
 import 'package:notes_app/cubits/add_note_cubit/add_note_cubit.dart';
+
+import 'color_item.dart';
 
 class ColorsListView extends StatefulWidget {
   const ColorsListView({Key? key}) : super(key: key);
@@ -11,33 +14,27 @@ class ColorsListView extends StatefulWidget {
 
 class _ColorsListViewState extends State<ColorsListView> {
   int currentIndex = 0;
-  List<Color> colors = const [
-    Color(0xffAC3931),
-    Color(0xffE5D352),
-    Color(0xffD9E76C),
-    Color(0xff537D8D),
-    Color(0xff482C3D),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 70,
       child:
           ListView.builder(
-            itemCount: colors.length,
+            itemCount: kColors.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) => Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 4.0),
                 child: GestureDetector(
                   onTap: (){
-                    BlocProvider.of<AddNoteCubit>(context).color = colors[index];
+                    BlocProvider.of<AddNoteCubit>(context).color = kColors[index];
                     currentIndex = index;
                     setState(() {
 
                     });
                   },
                   child: ColorItem(
-                    isActive: currentIndex == index, color: colors[index],
+                    isActive: currentIndex == index, color: kColors[index],
                   ),
                 ),
               ),
@@ -46,22 +43,3 @@ class _ColorsListViewState extends State<ColorsListView> {
   }
 }
 
-class ColorItem extends StatelessWidget {
-  const ColorItem({Key? key, required this.isActive, required this.color}) : super(key: key);
-  final bool isActive;
-  final Color color;
-  @override
-  Widget build(BuildContext context) {
-    return isActive ? CircleAvatar(
-      radius: 35,
-      backgroundColor: Colors.white,
-      child: CircleAvatar(
-        radius: 32,
-        backgroundColor: color,
-      ),
-    ) : CircleAvatar(
-      radius: 35,
-      backgroundColor: color,
-    );
-  }
-}
