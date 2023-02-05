@@ -1,16 +1,21 @@
-# notes_app
 
-A new Flutter project.
+# Notes App
 
-## Getting Started
+Simple Flutter app to add your notes and save it Locally with two fields title and content and you can pick the color.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Edit Note title and content
+- Edit the Color
+- Display the time of the Note
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Screenshots
+
+![Screenshot](first.jpg)
+![Screenshot](second.jpg)
+![Screenshot](third.jpg)
+
+
