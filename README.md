@@ -1,21 +1,14 @@
 
-# Notes App
+# Tic Tac
 
-Simple Flutter app to add your notes and save it Locally with two fields title and content and you can pick the color.
-
+it's a tic tac game
 
 ## Features
 
-- Edit Note title and content
-- Edit the Color
-- Display the time of the Note
-
-
+- you can play with your friend or vs the computer
 
 ## Screenshots
 
-![Screenshot](first.jpg)
-![Screenshot](second.jpg)
-![Screenshot](third.jpg)
-
+![Screenshot](1.jpg)
+![Screenshot](2.jpg)
 
